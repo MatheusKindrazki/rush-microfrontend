@@ -4,331 +4,331 @@
   "packages": [
     {
       "name": "@babel/core",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "@babel/eslint-parser",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "@babel/eslint-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "@babel/preset-react",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "@pmmmwh/react-refresh-webpack-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "@psdlabs/eslint-config",
-      "allowedCategories": [ "apps", "packages" ]
+      "allowedCategories": ["apps", "packages"]
     },
     {
       "name": "@psdlabs/hub-scripts",
-      "allowedCategories": [ "apps", "packages" ]
+      "allowedCategories": ["apps", "packages"]
     },
     {
       "name": "@svgr/webpack",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "@testing-library/jest-dom",
-      "allowedCategories": [ "apps", "packages", "tools" ]
+      "allowedCategories": ["apps", "packages", "tools"]
     },
     {
       "name": "@testing-library/react",
-      "allowedCategories": [ "apps", "packages", "tools" ]
+      "allowedCategories": ["apps", "packages", "tools"]
     },
     {
       "name": "@testing-library/user-event",
-      "allowedCategories": [ "apps", "packages", "tools" ]
+      "allowedCategories": ["apps", "packages", "tools"]
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "@typescript-eslint/parser",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "babel-eslint",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "babel-jest",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "babel-loader",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "babel-plugin-named-asset-import",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "babel-preset-react-app",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "babel-preset-react-app-webpack-5",
-      "allowedCategories": [ "packages" ]
+      "allowedCategories": ["packages"]
     },
     {
       "name": "bfj",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "camelcase",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "case-sensitive-paths-webpack-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "css-loader",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "customize-cra",
-      "allowedCategories": [ "packages" ]
+      "allowedCategories": ["packages"]
     },
     {
       "name": "dotenv",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "dotenv-expand",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-config-airbnb",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-config-prettier",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-config-react-app",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-plugin-flowtype",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-plugin-import",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-plugin-jest",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-plugin-jsx-a11y",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-plugin-prettier",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-plugin-react",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-plugin-react-hooks",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-plugin-testing-library",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "eslint-webpack-plugin",
-      "allowedCategories": [ "packages" ]
+      "allowedCategories": ["packages"]
     },
     {
       "name": "file-loader",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "fs-extra",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "fsevents",
-      "allowedCategories": [ "packages" ]
+      "allowedCategories": ["packages"]
     },
     {
       "name": "html-webpack-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "identity-obj-proxy",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "jest",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "jest-circus",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "jest-resolve",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "jest-watch-typeahead",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "lint-staged",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "mini-css-extract-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "optimize-css-assets-webpack-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "pnp-webpack-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "postcss-flexbugs-fixes",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "postcss-loader",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "postcss-normalize",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "postcss-preset-env",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "postcss-safe-parser",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "prompts",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "react",
-      "allowedCategories": [ "apps", "packages", "tools" ]
+      "allowedCategories": ["apps", "packages", "tools"]
     },
     {
       "name": "react-app-polyfill",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "react-dev-utils",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "react-dom",
-      "allowedCategories": [ "apps", "packages", "tools" ]
+      "allowedCategories": ["apps", "packages", "tools"]
     },
     {
       "name": "react-refresh",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "read-pkg-up",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "resolve",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "resolve-url-loader",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "sass-loader",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "semver",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "style-loader",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "terser-webpack-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "ts-pnp",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "apps", "packages", "tools" ]
+      "allowedCategories": ["apps", "packages", "tools"]
     },
     {
       "name": "url-loader",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "wbpk-5-cra-utils",
-      "allowedCategories": [ "packages" ]
+      "allowedCategories": ["packages"]
     },
     {
       "name": "web-vitals",
-      "allowedCategories": [ "apps", "packages", "tools" ]
+      "allowedCategories": ["apps", "packages", "tools"]
     },
     {
       "name": "webpack",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "webpack-cli",
-      "allowedCategories": [ "packages" ]
+      "allowedCategories": ["packages"]
     },
     {
       "name": "webpack-dev-server",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "webpack-manifest-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "which",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "workbox-webpack-plugin",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     },
     {
       "name": "yargs-parser",
-      "allowedCategories": [ "packages", "tools" ]
+      "allowedCategories": ["packages", "tools"]
     }
   ]
 }

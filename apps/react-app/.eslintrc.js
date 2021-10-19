@@ -1,3 +1,3 @@
-module.exports = {
-  extends: ['@psdlabs/eslint-config', '@psdlabs/eslint-config/react'],
-};
+// module.exports = {
+//   extends: ['@psdlabs/eslint-config', '@psdlabs/eslint-config/react'],
+// };

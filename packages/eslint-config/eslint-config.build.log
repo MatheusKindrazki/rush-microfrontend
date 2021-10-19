@@ -1,2 +1,12 @@
-Unable to calculate incremental build state. Instead running full rebuild. Ensure Git is present.
+Config file "/Users/matheuskindrazki/development/hub-digital/packages/eslint-config/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/eslint-config"
+
+Config file "/Users/matheuskindrazki/development/hub-digital/packages/hub-scripts/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/hub-scripts"
+
+Config file "/Users/matheuskindrazki/development/hub-digital/apps/react-app/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/apps/react-app"
 
