@@ -1,0 +1,29 @@
+{
+  "name": "@psdlabs/{{package-name}}",
+  "version": "1.0.0",
+  "description": "{{sentenceCase package-description}}",
+  "scripts": {
+    "build": "",
+    "test": "hub-scripts test",
+    "lint": "hub-scripts lint src/**/*.{ts,tsx}",
+    "lint-staged": "hub-scripts lint-staged"
+  },
+  "main": "",
+  "module": "",
+  "types": "",
+  "dependencies": {},
+  "devDependencies": {
+    "@psdlabs/hub-scripts": "1.0.0",
+    "@psdlabs/eslint-config": "1.0.0",
+    "typescript": "^4.3.2"
+  },
+  "peerDependencies": {
+    "typescript": "^4.3.2"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "hub-scripts lint --fix --",
+      "hub-scripts test --findRelatedTests --watchAll=false --silent"
+    ]
+  }
+}

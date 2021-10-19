@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.47.0",
+  "pnpmVersion": "6.16.1",
+  "pnpmOptions": {},
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0",
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 3,
+  "approvedPackagesPolicy": {
+    "reviewCategories": [
+      "apps",
+      "packages",
+      "tools"
+    ],
+    "ignoredNpmScopes": [
+      "@types"
+    ]
+  },
+  "gitPolicy": {},
+  "repository": {},
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "variants": [],
+  "projects": [
+    {
+      "packageName": "@psdlabs/react-app",
+      "projectFolder": "apps/react-app",
+      "reviewCategory": "apps"
+    },
+    {
+      "packageName": "@psdlabs/hub-scripts",
+      "projectFolder": "packages/hub-scripts",
+      "reviewCategory": "packages"
+    },
+    {
+      "packageName": "@psdlabs/eslint-config",
+      "projectFolder": "packages/eslint-config",
+      "reviewCategory": "packages"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Unable to calculate incremental build state. Instead running full rebuild. Ensure Git is present.
+
+Invoking: hub-scripts test 
+
+PASS src/App.test.tsx
+  ✓ renders learn react link (23 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        2.35 s
+Ran all test suites.
+

@@ -1,0 +1,13 @@
+{
+  "node": "14.17.0",
+  "packageManager": "pnpm",
+  "packageManagerVersion": "6.16.1",
+  "packageJson": {
+    "name": "rush-plop",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+      "plop": "^2.7.4"
+    }
+  }
+}
