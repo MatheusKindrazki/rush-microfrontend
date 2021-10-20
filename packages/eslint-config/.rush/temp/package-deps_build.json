@@ -8,8 +8,7 @@
     "packages/eslint-config/eslint-config.build.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
     "packages/eslint-config/index.js": "97f37769225e8b831eb192eedecfaa8bbd412efc",
     "packages/eslint-config/package.json": "8ab3462c77926a3e026ffc825a35f7dfce7e0945",
-    "packages/eslint-config/react.js": "1a6e8670fddc64d07063f6f5c72e6587eb1a4418",
-    "packages/eslint-config/.rush/temp/package-deps_build.json": "d9e575801a852f40db66687b5acdeaeb86d40226"
+    "packages/eslint-config/react.js": "1a6e8670fddc64d07063f6f5c72e6587eb1a4418"
   },
   "arguments": ""
 }
