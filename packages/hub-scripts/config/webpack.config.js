@@ -33,8 +33,6 @@ const mcf_config = require('../mcf-config');
 
 const appPackageJson = require(paths.appPackageJson);
 
-const deps = appPackageJson.dependencies;
-
 const ModuleFederationPlugin = webpack.container.ModuleFederationPlugin;
 
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';

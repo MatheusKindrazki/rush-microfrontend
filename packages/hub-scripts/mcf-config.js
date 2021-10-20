@@ -24,13 +24,20 @@ if (process.env.SHARED_DEPENDENCIES) {
     }
   });
 }
-
+// eslint-disable-next-line
 const moduleSharedDefaults = {
   react: {
+    requiredVersion: deps.react,
+    import: 'react',
+    shareKey: 'react',
+    shareScope: 'default',
     singleton: false,
+    eager: true,
   },
   'react-dom': {
+    requiredVersion: deps['react-dom'],
     singleton: true,
+    eager: true,
   },
 };
 
