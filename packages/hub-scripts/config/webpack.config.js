@@ -7,27 +7,29 @@ const resolve = require('resolve');
 const PnpWebpackPlugin = require('pnp-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
+const InlineChunkHtmlPlugin = require('wbpk-5-cra-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const safePostCssParser = require('postcss-safe-parser');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+const InterpolateHtmlPlugin = require('wbpk-5-cra-utils/InterpolateHtmlPlugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
+const WatchMissingNodeModulesPlugin = require('wbpk-5-cra-utils/WatchMissingNodeModulesPlugin');
 const ModuleScopePlugin = require('wbpk-5-cra-utils/ModuleScopePlugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+const getCSSModuleLocalIdent = require('wbpk-5-cra-utils/getCSSModuleLocalIdent');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
-const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
-const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
-const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const ModuleNotFoundPlugin = require('wbpk-5-cra-utils/ModuleNotFoundPlugin');
+const ForkTsCheckerWebpackPlugin = require('wbpk-5-cra-utils/ForkTsCheckerWebpackPlugin');
+const typescriptFormatter = require('wbpk-5-cra-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
+const getCacheIdentifier = require('wbpk-5-cra-utils/getCacheIdentifier');
 
 const overrides = require('../config-overrides');
+
+const mcf_config = require('../mcf-config');
 
 const appPackageJson = require(paths.appPackageJson);
 
@@ -38,10 +40,10 @@ const ModuleFederationPlugin = webpack.container.ModuleFederationPlugin;
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 
 const webpackDevClientEntry = require.resolve(
-  'react-dev-utils/webpackHotDevClient'
+  'wbpk-5-cra-utils/webpackHotDevClient'
 );
 const reactRefreshOverlayEntry = require.resolve(
-  'react-dev-utils/refreshOverlayInterop'
+  'wbpk-5-cra-utils/refreshOverlayInterop'
 );
 
 const instanceStyleLoader = require('./utils/getStyleLoaders');
@@ -90,16 +92,6 @@ function webpackConfig(webpackEnv) {
     isEnvDevelopment,
     isEnvProduction
   );
-
-  const sharedDependencies = {};
-
-  const shared = Array(process.env.SHARED_DEPENDENCIES);
-
-  Object.entries(deps).forEach(([key, value]) => {
-    if (shared.includes(key)) {
-      sharedDependencies[key] = value;
-    }
-  });
 
   const shouldUseReactRefresh = false;
 
@@ -270,7 +262,8 @@ function webpackConfig(webpackEnv) {
                     'babel-plugin-named-asset-import',
                     'babel-preset-react-app-webpack-5',
                     'react-dev-utils',
-                    'react-scripts',
+                    'wbpk-5-cra-utils',
+                    'hub-scripts',
                   ]
                 ),
                 // @remove-on-eject-end
@@ -325,7 +318,7 @@ function webpackConfig(webpackEnv) {
                     'babel-plugin-named-asset-import',
                     'babel-preset-react-app-webpack-5',
                     'react-dev-utils',
-                    'react-scripts',
+                    'hub-scripts',
                   ]
                 ),
                 // @remove-on-eject-end
@@ -399,29 +392,14 @@ function webpackConfig(webpackEnv) {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'app1',
-        filename: 'remoteEntry.js',
-        exposes: {
-          './App': './src',
-        },
-        shared: {
-          ...sharedDependencies,
-          react: {
-            requiredVersion: deps.react,
-            import: 'react',
-            singleton: true,
-          },
-          'react-dom': {
-            requiredVersion: deps['react-dom'],
-            singleton: true,
-          },
-        },
+        ...mcf_config,
+        filename: 'static/js/mcf-remote-[contenthash:22].js',
       }),
       new HtmlWebpackPlugin(
         Object.assign(
           {},
           {
-            inject: false,
+            inject: true,
             template: paths.appHtml,
           },
           isEnvProduction
@@ -510,7 +488,7 @@ function webpackConfig(webpackEnv) {
       !disableESLintPlugin &&
         new ESLintPlugin({
           extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx'],
-          formatter: require.resolve('react-dev-utils/eslintFormatter'),
+          formatter: require.resolve('wbpk-5-cra-utils/eslintFormatter'),
           eslintPath: require.resolve('eslint'),
           failOnError: !(isEnvDevelopment && emitErrorsAsWarnings),
           context: paths.appSrc,

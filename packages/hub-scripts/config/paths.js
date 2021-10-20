@@ -25,7 +25,7 @@ const customPath = require(path.resolve(projectDir, 'package.json'))[
   'config-overrides-path'
 ];
 
-var config_overrides = customPath
+let config_overrides = customPath
   ? `${projectDir}/${customPath}`
   : `${projectDir}/config-overrides.js`;
 
@@ -35,6 +35,8 @@ if (co_index > -1 && co_index + 1 <= process.argv.length) {
   config_overrides = path.resolve(process.argv[co_index + 1]);
   process.argv.splice(co_index, 2);
 }
+
+const mcf_config = `${projectDir}/mcf-config.js`;
 
 const buildPath = process.env.BUILD_PATH || 'build';
 
@@ -69,6 +71,7 @@ const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath);
 
 module.exports = {
   config_overrides,
+  mcf_config,
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
   appBuild: resolveApp(buildPath),

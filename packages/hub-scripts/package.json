@@ -53,6 +53,7 @@
     "jest-circus": "26.6.0",
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
+    "lodash": "~4.17.21",
     "mini-css-extract-plugin": "0.9.0",
     "optimize-css-assets-webpack-plugin": "5.0.4",
     "pnp-webpack-plugin": "1.6.4",
@@ -74,7 +75,7 @@
     "ts-pnp": "1.2.0",
     "url-loader": "4.1.1",
     "wbpk-5-cra-utils": "11.0.3",
-    "webpack": "5.10.0",
+    "webpack": "5.59.0",
     "webpack-dev-server": "3.11.1",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "5.1.4"
