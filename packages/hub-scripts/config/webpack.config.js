@@ -13,6 +13,8 @@ const mcf_config = require('../mcf-config');
 
 const utils = require('./webpack/utils');
 
+const overrides = require('../config-overrides');
+
 const {
   isEnvDevelopment,
   isEnvProduction,
@@ -110,5 +112,7 @@ module.exports = () => {
 
   const config = merge(webpackDefault, webpackMCFConfig);
 
-  return config;
+  const exportConfig = overrides.webpack(config, process.env.NODE_ENV);
+
+  return exportConfig;
 };
