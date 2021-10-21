@@ -15,28 +15,25 @@ const moduleName = appPackageJson.name;
 
 const deps = appPackageJson.dependencies;
 
-const sharedDependencies = {};
+const sharedDependencies = [];
 
 if (process.env.SHARED_DEPENDENCIES) {
   Object.entries(deps).forEach(([key, value]) => {
     if (shared.includes(key)) {
-      sharedDependencies[key] = value;
+      sharedDependencies.push(key);
     }
   });
 }
-// eslint-disable-next-line
+
 const moduleSharedDefaults = {
   react: {
-    requiredVersion: deps.react,
     import: 'react',
-    shareKey: 'react',
-    shareScope: 'default',
     singleton: false,
     eager: true,
   },
   'react-dom': {
-    requiredVersion: deps['react-dom'],
-    singleton: true,
+    import: 'react-dom',
+    singleton: false,
     eager: true,
   },
 };
@@ -47,8 +44,8 @@ const defaultConfig = {
   name: slugName,
   exposes: ['./src'],
   shared: {
-    ...moduleSharedDefaults,
     ...sharedDependencies,
+    ...moduleSharedDefaults,
   },
 };
 

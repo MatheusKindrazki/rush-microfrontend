@@ -8,6 +8,7 @@
     "scripts",
     "utils",
     "config-overrides.js",
+    "mcf-config.js",
     "shared-tsconfig.json"
   ],
   "bin": {

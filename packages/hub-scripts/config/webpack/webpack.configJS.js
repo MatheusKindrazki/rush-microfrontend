@@ -58,6 +58,7 @@ module.exports = {
         },
         parallel: process.env.CI ? false : true,
         sourceMap: shouldUseSourceMap,
+        extractComments: false,
       }),
     ],
     splitChunks: {
