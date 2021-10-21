@@ -62,7 +62,7 @@ module.exports = {
     ],
     splitChunks: {
       chunks: 'all',
-      name: isEnvDevelopment ? false : 'static/js/[name].[contenthash:8]',
+      name: false,
     },
   },
   module: {

@@ -1,5 +1,11 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const postcssNormalize = require('postcss-normalize');
 const paths = require('../../config/paths');
+
+const utils = require('../webpack/utils');
+
+const { shouldUseSourceMap } = utils;
 
 function styleLoaderInstance(isEnvDevelopment, isEnvProduction) {
   const getStyleLoaders = (cssOptions, preProcessor) => {
