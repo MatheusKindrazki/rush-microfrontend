@@ -3128,7 +3128,7 @@ packages:
       '@babel/types': 7.15.6
       eslint: 7.32.0
       eslint-visitor-keys: 1.3.0
-      resolve: 1.18.1
+      resolve: 1.20.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -3723,6 +3723,15 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
+    dev: false
+
+  /clone-deep/4.0.1:
+    resolution: {integrity: sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==}
+    engines: {node: '>=6'}
+    dependencies:
+      is-plain-object: 2.0.4
+      kind-of: 6.0.3
+      shallow-clone: 3.0.1
     dev: false
 
   /co/4.6.0:
@@ -9843,6 +9852,13 @@ packages:
     resolution: {integrity: sha512-JvdAWfbXeIGaZ9cILp38HntZSFSo3mWg6xGcJJsd+d4aRMOqauag1C63dJfDw7OaMYwEbHMOxEZ1lqVRYP2OAw==}
     dev: false
 
+  /shallow-clone/3.0.1:
+    resolution: {integrity: sha512-/6KqX+GVUdqPuPPd2LxDDxzX6CAbjJehAAOKlNpqqUpAqPM6HeL8f+o3a+JsyGjn2lv0WY8UsTgUJjU9Ok55NA==}
+    engines: {node: '>=8'}
+    dependencies:
+      kind-of: 6.0.3
+    dev: false
+
   /shebang-command/1.2.0:
     resolution: {integrity: sha1-RKrGW2lbAzmJaMOfNj/uXer98eo=}
     engines: {node: '>=0.10.0'}
@@ -11052,6 +11068,14 @@ packages:
       webpack: 5.58.0
     dev: false
 
+  /webpack-merge/5.8.0:
+    resolution: {integrity: sha512-/SaI7xY0831XwP6kzuwhKWVKDP9t1QY1h65lAFLbZqMPIuYcD9QAW4u9STIbU9kaJbPBB/geU/gLr1wDjOhQ+Q==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      clone-deep: 4.0.1
+      wildcard: 2.0.0
+    dev: false
+
   /webpack-sources/1.4.3:
     resolution: {integrity: sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==}
     dependencies:
@@ -11168,6 +11192,10 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
+    dev: false
+
+  /wildcard/2.0.0:
+    resolution: {integrity: sha512-JcKqAHLPxcdb9KM49dufGXn2x3ssnfjbcaQdLlfZsL9rH9wgDQjUtDxbo8NE0F6SFvydeu1VhZe7hZuHsB2/pw==}
     dev: false
 
   /word-wrap/1.2.3:
@@ -11484,7 +11512,7 @@ packages:
     dev: false
 
   file:projects/hub-scripts.tgz_typescript@4.4.4:
-    resolution: {integrity: sha512-hePxRkg9IIS2o7plixiyWz6F6UL1Ox+1DcmaJdSuSMHxp/Hc2uIPdhKPyde64qS76Dq28OW7Apc4Jc8ofHTReQ==, tarball: file:projects/hub-scripts.tgz}
+    resolution: {integrity: sha512-09czlh57jMGNUnimkN2IWCd75clvrq7aA/u/A7o6kMAJCSPoMMoffg9CiKEf4QDKRH3E2pLzzP7VXEHlXcqcjg==, tarball: file:projects/hub-scripts.tgz}
     id: file:projects/hub-scripts.tgz
     name: '@rush-temp/hub-scripts'
     version: 0.0.0
@@ -11550,6 +11578,7 @@ packages:
       webpack: 5.58.0
       webpack-dev-server: 3.11.1_webpack@5.58.0
       webpack-manifest-plugin: 2.2.0_webpack@5.58.0
+      webpack-merge: 5.8.0
       workbox-webpack-plugin: 5.1.4_webpack@5.58.0
     transitivePeerDependencies:
       - '@swc/core'
