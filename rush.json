@@ -27,11 +27,6 @@
   "variants": [],
   "projects": [
     {
-      "packageName": "@psdlabs/react-app",
-      "projectFolder": "apps/react-app",
-      "reviewCategory": "apps"
-    },
-    {
       "packageName": "@psdlabs/react-scripts",
       "projectFolder": "packages/react-scripts",
       "reviewCategory": "packages"
@@ -50,6 +45,16 @@
       "packageName": "@psdlabs/eslint-config",
       "projectFolder": "packages/eslint-config",
       "reviewCategory": "packages"
+    },
+    {
+      "packageName": "@psdlabs/babel-preset",
+      "projectFolder": "packages/babel-preset",
+      "reviewCategory": "packages"
+    },
+    {
+      "packageName": "@psdlabs/react-app",
+      "projectFolder": "apps/react-app",
+      "reviewCategory": "apps"
     }
   ]
 }

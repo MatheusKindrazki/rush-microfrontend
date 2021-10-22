@@ -18,10 +18,10 @@ const fs = require('fs-extra');
 const path = require('path');
 const prompts = require('prompts');
 const execSync = require('child_process').execSync;
-const chalk = require('react-dev-utils/chalk');
+const chalk = require('@psdlabs/react-utils/chalk');
 const paths = require('../config/paths');
 const createJestConfig = require('./utils/createJestConfig');
-const spawnSync = require('react-dev-utils/crossSpawn').sync;
+const spawnSync = require('@psdlabs/react-utils/crossSpawn').sync;
 const os = require('os');
 
 const green = chalk.green;
@@ -109,7 +109,12 @@ prompts({
     }
   }
 
-  const folders = ['config', 'config/jest', 'scripts', 'config/webpack/persistentCache'];
+  const folders = [
+    'config',
+    'config/jest',
+    'scripts',
+    'config/webpack/persistentCache',
+  ];
 
   // Make shallow array of files paths
   const files = folders.reduce((files, folder) => {
@@ -138,7 +143,7 @@ prompts({
   console.log(cyan(`Copying files into ${appPath}`));
 
   folders.forEach(folder => {
-    fs.mkdirSync(path.join(appPath, folder), {recursive: true});
+    fs.mkdirSync(path.join(appPath, folder), { recursive: true });
   });
 
   files.forEach(file => {

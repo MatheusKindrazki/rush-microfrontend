@@ -272,13 +272,6 @@
       ]
     },
     {
-      "name": "eslint-config-react-app",
-      "allowedCategories": [
-        "packages",
-        "tools"
-      ]
-    },
-    {
       "name": "eslint-plugin-flowtype",
       "allowedCategories": [
         "packages",
