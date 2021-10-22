@@ -7,8 +7,14 @@
   "projectFolderMinDepth": 2,
   "projectFolderMaxDepth": 3,
   "approvedPackagesPolicy": {
-    "reviewCategories": ["apps", "packages", "tools"],
-    "ignoredNpmScopes": ["@types"]
+    "reviewCategories": [
+      "apps",
+      "packages",
+      "tools"
+    ],
+    "ignoredNpmScopes": [
+      "@types"
+    ]
   },
   "gitPolicy": {},
   "repository": {},
@@ -26,8 +32,13 @@
       "reviewCategory": "apps"
     },
     {
-      "packageName": "@psdlabs/hub-scripts",
-      "projectFolder": "packages/hub-scripts",
+      "packageName": "@psdlabs/react-scripts",
+      "projectFolder": "packages/react-scripts",
+      "reviewCategory": "packages"
+    },
+    {
+      "packageName": "@psdlabs/react-utils",
+      "projectFolder": "packages/react-utils",
       "reviewCategory": "packages"
     },
     {

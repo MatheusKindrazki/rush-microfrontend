@@ -1,1 +1,1 @@
-/// <reference types="@psdlabs/hub-scripts" />
+/// <reference types="@psdlabs/react-scripts" />
