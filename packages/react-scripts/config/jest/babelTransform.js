@@ -1,14 +1,4 @@
-// @remove-on-eject-begin
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-// @remove-on-eject-end
-'use strict';
-
-const babelJest = require('babel-jest');
+const babelJest = require('babel-jest').default;
 
 const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
@@ -26,7 +16,7 @@ const hasJsxRuntime = (() => {
 module.exports = babelJest.createTransformer({
   presets: [
     [
-      require.resolve('@psdlabs/babel-preset'),
+      require.resolve('babel-preset-react-app'),
       {
         runtime: hasJsxRuntime ? 'automatic' : 'classic',
       },

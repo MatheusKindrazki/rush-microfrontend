@@ -1,17 +1,9 @@
-// @remove-on-eject-begin
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-// @remove-on-eject-end
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
-const chalk = require('@psdlabs/react-utils/chalk');
+const chalk = require('react-dev-utils/chalk');
 const resolve = require('resolve');
 
 /**

@@ -1,30 +1,22 @@
-#!/usr/bin/env node
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-'use strict';
-
-// Makes the script crash on unhandled rejections instead of silently
-// ignoring them. In the future, promise rejections that are not handled will
-// terminate the Node.js process with a non-zero exit code.
 process.on('unhandledRejection', err => {
   throw err;
 });
 
-const spawn = require('@psdlabs/react-utils/crossSpawn');
+const spawn = require('react-dev-utils/crossSpawn');
 const args = process.argv.slice(2);
 
 const scriptIndex = args.findIndex(
-  x => x === 'build' || x === 'eject' || x === 'start' || x === 'test'
+  x =>
+    x === 'build' ||
+    x === 'start' ||
+    x === 'lint' ||
+    x === 'lint-staged' ||
+    x === 'test'
 );
 const script = scriptIndex === -1 ? args[0] : args[scriptIndex];
 const nodeArgs = scriptIndex > 0 ? args.slice(0, scriptIndex) : [];
 
-if (['build', 'eject', 'start', 'test'].includes(script)) {
+if (['build', 'start', 'lint', 'lint-staged', 'test'].includes(script)) {
   const result = spawn.sync(
     process.execPath,
     nodeArgs
@@ -51,8 +43,4 @@ if (['build', 'eject', 'start', 'test'].includes(script)) {
   process.exit(result.status);
 } else {
   console.log('Unknown script "' + script + '".');
-  console.log('Perhaps you need to update react-scripts?');
-  console.log(
-    'See: https://facebook.github.io/create-react-app/docs/updating-to-new-releases'
-  );
 }

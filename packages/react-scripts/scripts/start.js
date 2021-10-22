@@ -1,11 +1,3 @@
-// @remove-on-eject-begin
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-// @remove-on-eject-end
 'use strict';
 
 // Do this as the first thing so that any code reading it knows the right env.
@@ -21,29 +13,20 @@ process.on('unhandledRejection', err => {
 
 // Ensure environment variables are read.
 require('../config/env');
-// @remove-on-eject-begin
-// Do the preflight check (only happens before eject).
-const verifyPackageTree = require('./utils/verifyPackageTree');
-if (process.env.SKIP_PREFLIGHT_CHECK !== 'true') {
-  verifyPackageTree();
-}
-const verifyTypeScriptSetup = require('./utils/verifyTypeScriptSetup');
-verifyTypeScriptSetup();
-// @remove-on-eject-end
 
 const fs = require('fs');
-const chalk = require('@psdlabs/react-utils/chalk');
+const chalk = require('react-dev-utils/chalk');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const clearConsole = require('@psdlabs/react-utils/clearConsole');
-const checkRequiredFiles = require('@psdlabs/react-utils/checkRequiredFiles');
+const clearConsole = require('react-dev-utils/clearConsole');
+const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
 const {
   choosePort,
   createCompiler,
   prepareProxy,
   prepareUrls,
-} = require('@psdlabs/react-utils/WebpackDevServerUtils');
-const openBrowser = require('@psdlabs/react-utils/openBrowser');
+} = require('react-dev-utils/WebpackDevServerUtils');
+const openBrowser = require('react-dev-utils/openBrowser');
 const semver = require('semver');
 const paths = require('../config/paths');
 const configFactory = require('../config/webpack.config');
@@ -83,8 +66,8 @@ if (process.env.HOST) {
 
 // We require that you explicitly set browsers and do not fall back to
 // browserslist defaults.
-const { checkBrowsers } = require('@psdlabs/react-utils/browsersHelper');
-checkBrowsers(paths.appPath, isInteractive)
+const { checkBrowsers } = require('react-dev-utils/browsersHelper');
+checkBrowsers(paths.ownPath, isInteractive)
   .then(() => {
     // We attempt to use the default port but if it is busy, we offer the user to
     // run on a different port. `choosePort()` Promise resolves to the next free port.
@@ -101,19 +84,28 @@ checkBrowsers(paths.appPath, isInteractive)
     const appName = require(paths.appPackageJson).name;
 
     const useTypeScript = fs.existsSync(paths.appTsConfig);
+    const tscCompileOnError = process.env.TSC_COMPILE_ON_ERROR === 'true';
     const urls = prepareUrls(
       protocol,
       HOST,
       port,
       paths.publicUrlOrPath.slice(0, -1)
     );
+    const devSocket = {
+      warnings: warnings =>
+        devServer.sockWrite(devServer.sockets, 'warnings', warnings),
+      errors: errors =>
+        devServer.sockWrite(devServer.sockets, 'errors', errors),
+    };
     // Create a webpack compiler that is configured with custom messages.
     const compiler = createCompiler({
       appName,
       config,
+      devSocket,
       urls,
       useYarn,
       useTypeScript,
+      tscCompileOnError,
       webpack,
     });
     // Load proxy config

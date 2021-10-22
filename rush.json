@@ -32,23 +32,8 @@
       "reviewCategory": "packages"
     },
     {
-      "packageName": "@psdlabs/babel-asset",
-      "projectFolder": "packages/babel-asset",
-      "reviewCategory": "packages"
-    },
-    {
-      "packageName": "@psdlabs/react-utils",
-      "projectFolder": "packages/react-utils",
-      "reviewCategory": "packages"
-    },
-    {
       "packageName": "@psdlabs/eslint-config",
       "projectFolder": "packages/eslint-config",
-      "reviewCategory": "packages"
-    },
-    {
-      "packageName": "@psdlabs/babel-preset",
-      "projectFolder": "packages/babel-preset",
       "reviewCategory": "packages"
     },
     {
