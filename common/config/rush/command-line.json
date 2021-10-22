@@ -222,6 +222,14 @@
       "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-plop",
       "shellCommand": "plop create-package"
+    },
+    {
+      "commandKind": "bulk",
+      "name": "start",
+      "summary": "Run starts",
+      "enableParallelism": true,
+      "ignoreDependencyOrder": true,
+      "ignoreMissingScript": true
     }
   ],
 

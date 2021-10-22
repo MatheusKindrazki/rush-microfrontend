@@ -37,6 +37,11 @@
       "reviewCategory": "packages"
     },
     {
+      "packageName": "@psdlabs/babel-asset",
+      "projectFolder": "packages/babel-asset",
+      "reviewCategory": "packages"
+    },
+    {
       "packageName": "@psdlabs/react-utils",
       "projectFolder": "packages/react-utils",
       "reviewCategory": "packages"

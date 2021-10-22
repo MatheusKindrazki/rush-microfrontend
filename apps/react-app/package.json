@@ -17,16 +17,16 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "hub-scripts start",
-    "build": "hub-scripts build",
-    "test": "hub-scripts test",
-    "lint": "hub-scripts lint src/**/*.{ts,tsx}",
-    "lint-staged": "hub-scripts lint-staged"
+    "start": "react-microfrontend start",
+    "build": "react-microfrontend build",
+    "test": "react-microfrontend test",
+    "lint": "react-microfrontend lint src/**/*.{ts,tsx}",
+    "lint-staged": "react-microfrontend lint-staged"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "hub-scripts lint --fix --",
-      "hub-scripts test --findRelatedTests --watchAll=false --silent"
+      "react-microfrontend lint --fix --",
+      "react-microfrontend test --findRelatedTests --watchAll=false --silent"
     ]
   },
   "browserslist": {

@@ -1,18 +1,36 @@
-Invoking: hub-scripts lint-staged 
+Config file "/Users/matheuskindrazki/development/hub-digital/packages/eslint-config/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/eslint-config"
+
+Config file "/Users/matheuskindrazki/development/hub-digital/apps/react-app/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/apps/react-app"
+
+Config file "/Users/matheuskindrazki/development/hub-digital/packages/react-scripts/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/react-scripts"
+
+Config file "/Users/matheuskindrazki/development/hub-digital/packages/react-utils/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/react-utils"
+
+Invoking: react-microfrontend start 
 
 internal/modules/cjs/loader.js:888
   throw err;
   ^
 
-Error: Cannot find module 'which'
+Error: Cannot find module 'workbox-build/build/options/schema/webpack-generate-sw'
 Require stack:
-- /Users/matheuskindrazki/development/hub-digital/packages/hub-scripts/scripts/utils/index.js
-- /Users/matheuskindrazki/development/hub-digital/packages/hub-scripts/scripts/lint-staged.js
+- /Users/matheuskindrazki/development/hub-digital/common/temp/node_modules/.pnpm/workbox-webpack-plugin@6.1.5_webpack@5.41.1/node_modules/workbox-webpack-plugin/build/generate-sw.js
+- /Users/matheuskindrazki/development/hub-digital/common/temp/node_modules/.pnpm/workbox-webpack-plugin@6.1.5_webpack@5.41.1/node_modules/workbox-webpack-plugin/build/index.js
+- /Users/matheuskindrazki/development/hub-digital/packages/react-scripts/config/webpack.config.js
+- /Users/matheuskindrazki/development/hub-digital/packages/react-scripts/scripts/start.js
     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:885:15)
     at Function.Module._load (internal/modules/cjs/loader.js:730:27)
     at Module.require (internal/modules/cjs/loader.js:957:19)
     at require (internal/modules/cjs/helpers.js:88:18)
-    at Object.<anonymous> (/Users/matheuskindrazki/development/hub-digital/packages/hub-scripts/scripts/utils/index.js:3:15)
+    at Object.<anonymous> (/Users/matheuskindrazki/development/hub-digital/common/temp/node_modules/.pnpm/workbox-webpack-plugin@6.1.5_webpack@5.41.1/node_modules/workbox-webpack-plugin/build/generate-sw.js:20:33)
     at Module._compile (internal/modules/cjs/loader.js:1068:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1097:10)
     at Module.load (internal/modules/cjs/loader.js:933:32)
@@ -20,7 +38,9 @@ Require stack:
     at Module.require (internal/modules/cjs/loader.js:957:19) {
   code: 'MODULE_NOT_FOUND',
   requireStack: [
-    '/Users/matheuskindrazki/development/hub-digital/packages/hub-scripts/scripts/utils/index.js',
-    '/Users/matheuskindrazki/development/hub-digital/packages/hub-scripts/scripts/lint-staged.js'
+    '/Users/matheuskindrazki/development/hub-digital/common/temp/node_modules/.pnpm/workbox-webpack-plugin@6.1.5_webpack@5.41.1/node_modules/workbox-webpack-plugin/build/generate-sw.js',
+    '/Users/matheuskindrazki/development/hub-digital/common/temp/node_modules/.pnpm/workbox-webpack-plugin@6.1.5_webpack@5.41.1/node_modules/workbox-webpack-plugin/build/index.js',
+    '/Users/matheuskindrazki/development/hub-digital/packages/react-scripts/config/webpack.config.js',
+    '/Users/matheuskindrazki/development/hub-digital/packages/react-scripts/scripts/start.js'
   ]
 }

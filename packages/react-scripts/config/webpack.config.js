@@ -417,7 +417,7 @@ module.exports = function (webpackEnv) {
                     ? 'production'
                     : isEnvDevelopment && 'development',
                   [
-                    'babel-plugin-named-asset-import',
+                    '@psdlabs/babel-asset',
                     'babel-preset-react-app',
                     'react-dev-utils',
                     'react-scripts',
@@ -463,7 +463,7 @@ module.exports = function (webpackEnv) {
                     ? 'production'
                     : isEnvDevelopment && 'development',
                   [
-                    'babel-plugin-named-asset-import',
+                    '@psdlabs/babel-asset',
                     'babel-preset-react-app',
                     'react-dev-utils',
                     'react-scripts',
