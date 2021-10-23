@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const getPublicUrlOrPath = require('react-dev-utils/getPublicUrlOrPath');
+const getPublicUrlOrPath = require('@psdlabs/react-utils/getPublicUrlOrPath');
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebook/create-react-app/issues/637
@@ -21,10 +21,7 @@ const publicUrlOrPath = getPublicUrlOrPath(
 
 const buildPath = process.env.BUILD_PATH || 'build';
 
-const moduleFederationConfigFiles = [
-  '.modulefederationrc.json',
-  '.modulefederationrc.js',
-];
+const mcfConfigFile = ['.microfrontendrc.json', '.microfrontendrc.js'];
 
 const moduleFileExtensions = [
   'web.mjs',
@@ -79,10 +76,7 @@ module.exports = {
   ownNodeModules: resolveOwn('node_modules'), // This is empty on npm 3
   appTypeDeclarations: resolveApp('src/react-app-env.d.ts'),
   ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
-  appMFConfigFile: moduleFederationConfigFiles
-    .map(resolveApp)
-    .filter(fs.existsSync)
-    .shift(),
+  mcfConfigFile: mcfConfigFile.map(resolveApp).filter(fs.existsSync).shift(),
 };
 
 module.exports.moduleFileExtensions = moduleFileExtensions;

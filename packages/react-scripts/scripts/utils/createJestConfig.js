@@ -1,5 +1,5 @@
 const fs = require('fs');
-const chalk = require('react-dev-utils/chalk');
+const chalk = require('@psdlabs/react-utils/chalk');
 const paths = require('../../config/paths');
 const modules = require('../../config/modules');
 

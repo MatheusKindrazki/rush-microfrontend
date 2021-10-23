@@ -1,6 +1,11 @@
 {
-  "exclude": ["node_modules"],
-  "include": ["../../../src/**/*"],
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "/**/*",
+    "./lib/react-app.d.ts"
+  ],
   "compilerOptions": {
     "target": "es5",
     "isolatedModules": true,
@@ -13,10 +18,16 @@
     "jsx": "react",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["es2021", "dom"],
-    "baseUrl": "../../../src",
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+    "baseUrl": ".",
     "paths": {
-      "*": ["*", "../../tests/*"]
+      "*": [
+        "*",
+        "../../tests/*"
+      ]
     },
     "preserveWatchOutput": true
   }

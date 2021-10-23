@@ -2,40 +2,46 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const resolve = require('resolve');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
+const InlineChunkHtmlPlugin = require('@psdlabs/react-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+const InterpolateHtmlPlugin = require('@psdlabs/react-utils/InterpolateHtmlPlugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+const getCSSModuleLocalIdent = require('@psdlabs/react-utils/getCSSModuleLocalIdent');
+
+const ModuleNotFoundPlugin = require('@psdlabs/react-utils/ModuleNotFoundPlugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const getCacheIdentifier = require('@psdlabs/react-utils/getCacheIdentifier');
+const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
+
 const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
-const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
-const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
+
+const ModuleFederationPlugin = webpack.container.ModuleFederationPlugin;
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 
-const reactRefreshRuntimeEntry = require.resolve('react-refresh/runtime');
-const reactRefreshWebpackPluginRuntimeEntry = require.resolve(
-  '@pmmmwh/react-refresh-webpack-plugin'
-);
-const babelRuntimeEntry = require.resolve('babel-preset-react-app');
-const babelRuntimeEntryHelpers = require.resolve(
-  '@babel/runtime/helpers/esm/assertThisInitialized',
-  { paths: [babelRuntimeEntry] }
-);
-const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
-  paths: [babelRuntimeEntry],
-});
+// const reactRefreshRuntimeEntry = require.resolve('react-refresh/runtime');
+// const reactRefreshWebpackPluginRuntimeEntry = require.resolve(
+//   '@pmmmwh/react-refresh-webpack-plugin'
+// );
+// const babelRuntimeEntry = require.resolve('babel-preset-react-app');
+
+// const babelRuntimeEntryHelpers = require.resolve(
+//   '@babel/runtime/helpers/esm/assertThisInitialized',
+//   { paths: [babelRuntimeEntry] }
+// );
+// const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
+//   paths: [babelRuntimeEntry],
+// });
 
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
@@ -157,7 +163,7 @@ module.exports = function (webpackEnv) {
   };
 
   return {
-    target: [`browserslist:${paths.ownPath}/package.json`],
+    // target: [`browserslist:${paths.ownPath}/package.json`],
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
@@ -387,7 +393,7 @@ module.exports = function (webpackEnv) {
                   [
                     'babel-plugin-named-asset-import',
                     'babel-preset-react-app',
-                    'react-dev-utils',
+                    '@psdlabs/react-utils',
                     'react-scripts',
                   ]
                 ),
@@ -431,7 +437,7 @@ module.exports = function (webpackEnv) {
                   [
                     'babel-plugin-named-asset-import',
                     'babel-preset-react-app',
-                    'react-dev-utils',
+                    '@psdlabs/react-utils',
                     'react-scripts',
                   ]
                 ),
@@ -544,32 +550,38 @@ module.exports = function (webpackEnv) {
       ].filter(Boolean),
     },
     plugins: [
+      new ModuleFederationPlugin({
+        name: 'app_123',
+        exposes: ['./src'],
+        filename: 'static/js/remoteEntry.js',
+      }),
       // Generates an `index.html` file with the <script> injected.
-      new HtmlWebpackPlugin(
-        Object.assign(
-          {},
-          {
-            inject: true,
-            template: paths.appHtml,
-          },
-          isEnvProduction
-            ? {
-                minify: {
-                  removeComments: true,
-                  collapseWhitespace: true,
-                  removeRedundantAttributes: true,
-                  useShortDoctype: true,
-                  removeEmptyAttributes: true,
-                  removeStyleLinkTypeAttributes: true,
-                  keepClosingSlash: true,
-                  minifyJS: true,
-                  minifyCSS: true,
-                  minifyURLs: true,
-                },
-              }
-            : undefined
-        )
-      ),
+      !isEnvProduction &&
+        new HtmlWebpackPlugin(
+          Object.assign(
+            {},
+            {
+              inject: true,
+              template: paths.appHtml,
+            },
+            isEnvProduction
+              ? {
+                  minify: {
+                    removeComments: true,
+                    collapseWhitespace: true,
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true,
+                    removeEmptyAttributes: true,
+                    removeStyleLinkTypeAttributes: true,
+                    keepClosingSlash: true,
+                    minifyJS: true,
+                    minifyCSS: true,
+                    minifyURLs: true,
+                  },
+                }
+              : undefined
+          )
+        ),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358
@@ -703,10 +715,6 @@ module.exports = function (webpackEnv) {
             infrastructure: 'silent',
           },
         }),
-      paths.appMFConfigFile &&
-        new webpack.container.ModuleFederationPlugin(
-          require(paths.appMFConfigFile)
-        ),
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter

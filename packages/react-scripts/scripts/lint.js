@@ -1,4 +1,4 @@
-const spawn = require('react-dev-utils/crossSpawn');
+const spawn = require('@psdlabs/react-utils/crossSpawn');
 const yargsParser = require('yargs-parser');
 const { resolveBin, fromRoot, appDirectory } = require('./utils');
 

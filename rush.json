@@ -32,6 +32,11 @@
       "reviewCategory": "packages"
     },
     {
+      "packageName": "@psdlabs/react-utils",
+      "projectFolder": "packages/react-utils",
+      "reviewCategory": "packages"
+    },
+    {
       "packageName": "@psdlabs/eslint-config",
       "projectFolder": "packages/eslint-config",
       "reviewCategory": "packages"

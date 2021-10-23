@@ -1,4 +1,4 @@
-const spawn = require('react-dev-utils/crossSpawn');
+const spawn = require('@psdlabs/react-utils/crossSpawn');
 const { resolveBin } = require('./utils');
 
 const args = process.argv.slice(2);
