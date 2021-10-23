@@ -1,1 +1,1 @@
-/// <reference types="@psdlabs/react-scripts" />
+/// <reference types="@monorepo/react-scripts" />

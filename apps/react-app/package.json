@@ -1,10 +1,8 @@
 {
   "name": "@psdlabs/react-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@psdlabs/eslint-config": "1.0.0",
-    "@psdlabs/react-scripts": "1.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -14,12 +12,16 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typescript": "^4.3.5",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "@psdlabs/react-scripts": "1.0.0",
+    "@psdlabs/eslint-config": "1.0.0",
+    "@types/testing-library__jest-dom": "~5.14.1"
   },
   "scripts": {
     "start": "react-microfrontend start",
     "build": "react-microfrontend build",
-    "test": "react-microfrontend test",
+    "test:watch": "react-microfrontend test --watchAll=false",
+    "test": "react-microfrontend test --watchAll=false",
     "lint": "react-microfrontend lint src/**/*.{ts,tsx}",
     "lint-staged": "react-microfrontend lint-staged"
   },
@@ -27,18 +29,6 @@
     "src/**/*.{ts,tsx}": [
       "react-microfrontend lint --fix --",
       "react-microfrontend test --findRelatedTests --watchAll=false --silent"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   }
 }
