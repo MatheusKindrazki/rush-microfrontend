@@ -1,0 +1,14 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+    "err": {
+      "name": "pnpm",
+      "message": "No package.json (or package.yaml, or package.json5) was found in \"/Users/matheuskindrazki/development/hub-digital\".",
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "stack": "pnpm: No package.json (or package.yaml, or package.json5) was found in \"/Users/matheuskindrazki/development/hub-digital\".\n    at readProjectManifest (/Users/matheuskindrazki/.nvm/versions/node/v16.9.1/lib/node_modules/pnpm/dist/pnpm.cjs:40497:13)\n    at async Object.readProjectManifestOnly (/Users/matheuskindrazki/.nvm/versions/node/v16.9.1/lib/node_modules/pnpm/dist/pnpm.cjs:40501:28)\n    at async Object.readProjectManifestOnly (/Users/matheuskindrazki/.nvm/versions/node/v16.9.1/lib/node_modules/pnpm/dist/pnpm.cjs:40720:24)\n    at async Object.handler (/Users/matheuskindrazki/.nvm/versions/node/v16.9.1/lib/node_modules/pnpm/dist/pnpm.cjs:129562:24)\n    at async /Users/matheuskindrazki/.nvm/versions/node/v16.9.1/lib/node_modules/pnpm/dist/pnpm.cjs:133736:20\n    at async run (/Users/matheuskindrazki/.nvm/versions/node/v16.9.1/lib/node_modules/pnpm/dist/pnpm.cjs:133711:34)\n    at async runPnpm (/Users/matheuskindrazki/.nvm/versions/node/v16.9.1/lib/node_modules/pnpm/dist/pnpm.cjs:133921:5)\n    at async /Users/matheuskindrazki/.nvm/versions/node/v16.9.1/lib/node_modules/pnpm/dist/pnpm.cjs:133913:7"
+    }
+  }
+}

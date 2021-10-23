@@ -71,6 +71,14 @@
       "allowedCategories": [ "packages" ]
     },
     {
+      "name": "@monorepo/eslint-config",
+      "allowedCategories": [ "apps" ]
+    },
+    {
+      "name": "@monorepo/react-microfrontend",
+      "allowedCategories": [ "apps" ]
+    },
+    {
       "name": "@pmmmwh/react-refresh-webpack-plugin",
       "allowedCategories": [ "packages", "tools" ]
     },

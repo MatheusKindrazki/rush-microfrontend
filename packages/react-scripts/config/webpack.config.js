@@ -703,6 +703,10 @@ module.exports = function (webpackEnv) {
             infrastructure: 'silent',
           },
         }),
+      paths.appMFConfigFile &&
+        new webpack.container.ModuleFederationPlugin(
+          require(paths.appMFConfigFile)
+        ),
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter

@@ -21,6 +21,11 @@ const publicUrlOrPath = getPublicUrlOrPath(
 
 const buildPath = process.env.BUILD_PATH || 'build';
 
+const moduleFederationConfigFiles = [
+  '.modulefederationrc.json',
+  '.modulefederationrc.js',
+];
+
 const moduleFileExtensions = [
   'web.mjs',
   'mjs',
@@ -74,6 +79,10 @@ module.exports = {
   ownNodeModules: resolveOwn('node_modules'), // This is empty on npm 3
   appTypeDeclarations: resolveApp('src/react-app-env.d.ts'),
   ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
+  appMFConfigFile: moduleFederationConfigFiles
+    .map(resolveApp)
+    .filter(fs.existsSync)
+    .shift(),
 };
 
 module.exports.moduleFileExtensions = moduleFileExtensions;
