@@ -7,7 +7,7 @@
     "lib",
     "scripts",
     "utils",
-    ".microfrontendrc.js",
+    "microfrontendrc.js",
     "shared-tsconfig.json"
   ],
   "bin": {

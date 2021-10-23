@@ -23,25 +23,12 @@ const createEnvironmentHash = require('./webpack/persistentCache/createEnvironme
 const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
+const mcf_config = require('../microfrontendrc');
 
 const ModuleFederationPlugin = webpack.container.ModuleFederationPlugin;
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
-
-// const reactRefreshRuntimeEntry = require.resolve('react-refresh/runtime');
-// const reactRefreshWebpackPluginRuntimeEntry = require.resolve(
-//   '@pmmmwh/react-refresh-webpack-plugin'
-// );
-// const babelRuntimeEntry = require.resolve('babel-preset-react-app');
-
-// const babelRuntimeEntryHelpers = require.resolve(
-//   '@babel/runtime/helpers/esm/assertThisInitialized',
-//   { paths: [babelRuntimeEntry] }
-// );
-// const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
-//   paths: [babelRuntimeEntry],
-// });
 
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
@@ -551,9 +538,8 @@ module.exports = function (webpackEnv) {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'app_123',
-        exposes: ['./src'],
-        filename: 'static/js/remoteEntry.js',
+        ...mcf_config,
+        filename: 'static/js/mcf-remote.js',
       }),
       // Generates an `index.html` file with the <script> injected.
       !isEnvProduction &&
