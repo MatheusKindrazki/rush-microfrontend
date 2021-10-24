@@ -681,11 +681,20 @@ module.exports = function (webpackEnv) {
 
           url = url.replace('.map', '');
 
+          const name = mcf_config.name;
+
+          delete mcf_config.name;
+
           return {
-            name: mcf_config.name,
+            name: name,
             url: url,
-            ...mcf_config,
-            basename: process.env.BASENAME,
+            type: 'react',
+            version: env.raw.VERSION,
+            basename: env.raw.BASENAME,
+            include_html: env.raw.INCLUDE_HTML_BUILD,
+            configs: {
+              ...mcf_config,
+            },
           };
         },
       }),

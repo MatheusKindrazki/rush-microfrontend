@@ -25,6 +25,8 @@ const dotenvFiles = [
   paths.dotenv,
 ].filter(Boolean);
 
+const appVersion = paths.appPackageJson.version;
+
 // Load environment variables from .env* files. Suppress warnings using silent
 // if this file is missing. dotenv will never modify any environment variables
 // that have already been set.  Variable expansion is supported in .env files.
@@ -61,12 +63,14 @@ function getClientEnvironment(publicUrl) {
       },
       {
         PUBLIC_URL: publicUrl,
-        BASENAME: process.env.BASENAME,
+        BASENAME: process.env.BASENAME || '/',
+        VERSION: process.env.VERSION || appVersion,
         NODE_ENV: process.env.NODE_ENV || 'development',
         WDS_SOCKET_HOST: process.env.WDS_SOCKET_HOST,
         WDS_SOCKET_PATH: process.env.WDS_SOCKET_PATH,
         WDS_SOCKET_PORT: process.env.WDS_SOCKET_PORT,
         FAST_REFRESH: process.env.FAST_REFRESH !== 'false',
+        INCLUDE_HTML_BUILD: process.env.INCLUDE_HTML_BUILD || false,
         SHARED_DEPENDENCIES: process.env.SHARED_DEPENDENCIES || undefined,
       }
     );
