@@ -687,9 +687,9 @@ module.exports = function (webpackEnv) {
 
           return {
             name: name,
-            url: url,
             type: 'react',
             version: env.raw.VERSION,
+            url: url,
             basename: env.raw.BASENAME,
             include_html: env.raw.INCLUDE_HTML_BUILD,
             configs: {

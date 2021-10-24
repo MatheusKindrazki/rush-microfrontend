@@ -25,7 +25,7 @@ const dotenvFiles = [
   paths.dotenv,
 ].filter(Boolean);
 
-const appVersion = paths.appPackageJson.version;
+const appVersion = require(paths.appPackageJson).version;
 
 // Load environment variables from .env* files. Suppress warnings using silent
 // if this file is missing. dotenv will never modify any environment variables
