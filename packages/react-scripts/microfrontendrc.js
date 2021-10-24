@@ -35,7 +35,9 @@ const slugName = _.kebabCase(moduleName).replace(/-/g, '_');
 
 const defaultConfig = {
   name: slugName,
-  exposes: ['./src'],
+  exposes: {
+    './App': './src/App',
+  },
   shared: {
     ...sharedDependencies,
     ...moduleSharedDefaults,

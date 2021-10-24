@@ -60,8 +60,9 @@ function getClientEnvironment(publicUrl) {
         return env;
       },
       {
-        NODE_ENV: process.env.NODE_ENV || 'development',
         PUBLIC_URL: publicUrl,
+        BASENAME: process.env.BASENAME,
+        NODE_ENV: process.env.NODE_ENV || 'development',
         WDS_SOCKET_HOST: process.env.WDS_SOCKET_HOST,
         WDS_SOCKET_PATH: process.env.WDS_SOCKET_PATH,
         WDS_SOCKET_PORT: process.env.WDS_SOCKET_PORT,
