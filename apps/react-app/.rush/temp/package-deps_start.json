@@ -1,0 +1,20 @@
+{
+  "files": {
+    "apps/react-app/.eslintrc.js": "5c23e6ea129bdeed20b077d08953dfc585e739e6",
+    "apps/react-app/.gitignore": "4d29575de80483b005c29bfcac5061cd2f45313e",
+    "apps/react-app/.rush/temp/shrinkwrap-deps.json": "02ec89c5ee218123af2ae2453966065eb620ab03",
+    "apps/react-app/package.json": "810cb53a1cf0aa86fdba202e5a39a851c47e1402",
+    "apps/react-app/public/favicon.ico": "a11777cc471a4344702741ab1c8a588998b1311a",
+    "apps/react-app/public/index.html": "aa069f27cbd9d53394428171c3989fd03db73c76",
+    "apps/react-app/public/logo192.png": "fc44b0a3796c0e0a64c3d858ca038bd4570465d9",
+    "apps/react-app/public/logo512.png": "a4e47a6545bc15971f8f63fba70e4013df88a664",
+    "apps/react-app/public/manifest.json": "080d6c77ac21bb2ef88a6992b2b73ad93daaca92",
+    "apps/react-app/public/robots.txt": "e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e",
+    "apps/react-app/src/App.tsx": "1cc68fee400b64431d8083b6bf6e45ffe08997e4",
+    "apps/react-app/src/bootstrap.tsx": "00a7fc41fe566c752d71268e1448133463e55ebf",
+    "apps/react-app/src/index.ts": "6102ec8cd3771e6f4d584862391b1cb28f121685",
+    "apps/react-app/tsconfig.json": "9d379a3c4af84ae50928aaef7dd3a3d9cadeacde",
+    "apps/react-app/react-app.build.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  "arguments": "react-microfrontend start "
+}

@@ -1,0 +1,30 @@
+{
+  "files": {
+    "packages/react-scripts/.rush/temp/shrinkwrap-deps.json": "055ca286876be73e9e3d3d5739012a7a923032fa",
+    "packages/react-scripts/bin/react-scripts.js": "6bcfca18fc899c33819fa8aff9b8c1e1f1210e6b",
+    "packages/react-scripts/config/env.js": "ec94c7493836a58cab69ccaacb523f96f16e54c8",
+    "packages/react-scripts/config/getHttpsConfig.js": "087b77302d776be3a141359a425166d7b6c2bafb",
+    "packages/react-scripts/config/jest/babelTransform.js": "819473c8df3447361bc536511fec721737c71315",
+    "packages/react-scripts/config/jest/cssTransform.js": "240c636445ac96b5f25df5fba7761087a9f9788c",
+    "packages/react-scripts/config/jest/fileTransform.js": "b301c88ffd1c8b79cfc463b5fd6ec048e335202f",
+    "packages/react-scripts/config/modules.js": "06c85963576a478fbcee5bc17ba415da7c7d0e38",
+    "packages/react-scripts/config/paths.js": "b0ce4ef4f948d0bbed40e2d279558596355a7d00",
+    "packages/react-scripts/config/pnpTs.js": "d1b0539f80083580d03663342e619e13587ca01d",
+    "packages/react-scripts/config/webpack.config.js": "ec4b0774f2049aff1145ae53076f95dd05630be7",
+    "packages/react-scripts/config/webpack/persistentCache/createEnvironmentHash.js": "6d6be382f934e7ad057eefb398fe2c1b89fa082e",
+    "packages/react-scripts/config/webpackDevServer.config.js": "a4b874c957068ca8f62806d6ff09889da86355f2",
+    "packages/react-scripts/lib/react-app.d.ts": "7b5ad644333433dea3144152763bac13ac325a20",
+    "packages/react-scripts/microfrontendrc.js": "f87d5eb269aa3867925d4b047987174dd910066c",
+    "packages/react-scripts/package.json": "a9e0dde142e5ecbb58ff84173a737542d06ee1cb",
+    "packages/react-scripts/scripts/build.js": "2ce4f8ab4553aa385c2f1c4f9e014f268631827f",
+    "packages/react-scripts/scripts/lint-staged.js": "d18572e6ee0ad633403c147fe1d003ec03b9211c",
+    "packages/react-scripts/scripts/lint.js": "9144e3c2ef80271f28d9a99d6baf74b21472976e",
+    "packages/react-scripts/scripts/start.js": "21d971cf33df16f88a0da241f6288bee06b1c4b4",
+    "packages/react-scripts/scripts/test.js": "985e18f79472f9f0949a2a3758090d97d037794d",
+    "packages/react-scripts/scripts/utils/createJestConfig.js": "53794efcdf7b8295216cac2c2d739d2f4518ac79",
+    "packages/react-scripts/scripts/utils/index.js": "519a7006605d3296c0aa2600a873a715a0c7924f",
+    "packages/react-scripts/shared-tsconfig.json": "2987369b3e3677e25849241e513061db2e769781",
+    "packages/react-scripts/react-scripts.build.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  "arguments": ""
+}

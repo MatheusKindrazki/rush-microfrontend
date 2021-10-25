@@ -7,6 +7,7 @@ specifiers:
   '@babel/eslint-plugin': ~7.13.16
   '@babel/preset-react': ~7.13.13
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.1
+  '@rush-temp/core': file:./projects/core.tgz
   '@rush-temp/eslint-config': file:./projects/eslint-config.tgz
   '@rush-temp/react-app': file:./projects/react-app.tgz
   '@rush-temp/react-scripts': file:./projects/react-scripts.tgz
@@ -109,6 +110,7 @@ dependencies:
   '@babel/eslint-plugin': 7.13.16_e24cd50574d9fee357a9427591e77dc2
   '@babel/preset-react': 7.13.13_@babel+core@7.15.8
   '@pmmmwh/react-refresh-webpack-plugin': 0.5.1_3648fa48d33d93ac8d1e59c9dcd197aa
+  '@rush-temp/core': file:projects/core.tgz
   '@rush-temp/eslint-config': file:projects/eslint-config.tgz_@babel+core@7.15.8
   '@rush-temp/react-app': file:projects/react-app.tgz
   '@rush-temp/react-scripts': file:projects/react-scripts.tgz_55c8e7af2ef312d86d6ea1595b201548
@@ -13037,6 +13039,26 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  file:projects/core.tgz:
+    resolution: {integrity: sha512-170GqG4hKBVUypUHlpwxbOFnwoj3/BJcpI6ud1KYBZunUFB67V+JQE8gQ/gKLknA5sDHRd5Uzsra8wRsOcRung==, tarball: file:projects/core.tgz}
+    name: '@rush-temp/core'
+    version: 0.0.0
+    dependencies:
+      '@testing-library/jest-dom': 5.14.1
+      '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
+      '@testing-library/user-event': 12.8.3
+      '@types/jest': 26.0.24
+      '@types/react': 17.0.31
+      '@types/react-dom': 17.0.10
+      '@types/testing-library__jest-dom': 5.14.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      typescript: 4.4.4
+      web-vitals: 1.1.2
+    transitivePeerDependencies:
+      - '@testing-library/dom'
     dev: false
 
   file:projects/eslint-config.tgz_@babel+core@7.15.8:

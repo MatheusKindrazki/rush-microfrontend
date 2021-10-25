@@ -63,6 +63,7 @@ function getClientEnvironment(publicUrl) {
       },
       {
         PUBLIC_URL: publicUrl,
+        PORT: process.env.PORT || undefined,
         BASENAME: process.env.BASENAME || '/',
         VERSION: process.env.VERSION || appVersion,
         NODE_ENV: process.env.NODE_ENV || 'development',

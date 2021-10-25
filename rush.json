@@ -45,6 +45,11 @@
       "packageName": "@psdlabs/react-app",
       "projectFolder": "apps/react-app",
       "reviewCategory": "apps"
+    },
+    {
+      "packageName": "@psdlabs/core",
+      "projectFolder": "apps/core",
+      "reviewCategory": "apps"
     }
   ]
 }

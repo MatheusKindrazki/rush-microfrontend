@@ -542,32 +542,31 @@ module.exports = function (webpackEnv) {
         filename: 'static/js/mcf-remote.js',
       }),
       // Generates an `index.html` file with the <script> injected.
-      !isEnvProduction &&
-        new HtmlWebpackPlugin(
-          Object.assign(
-            {},
-            {
-              inject: true,
-              template: paths.appHtml,
-            },
-            isEnvProduction
-              ? {
-                  minify: {
-                    removeComments: true,
-                    collapseWhitespace: true,
-                    removeRedundantAttributes: true,
-                    useShortDoctype: true,
-                    removeEmptyAttributes: true,
-                    removeStyleLinkTypeAttributes: true,
-                    keepClosingSlash: true,
-                    minifyJS: true,
-                    minifyCSS: true,
-                    minifyURLs: true,
-                  },
-                }
-              : undefined
-          )
-        ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {
+            inject: true,
+            template: paths.appHtml,
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358
