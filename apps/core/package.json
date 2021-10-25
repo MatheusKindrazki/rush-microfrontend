@@ -20,6 +20,7 @@
   "scripts": {
     "start": "react-microfrontend start",
     "build": "react-microfrontend build",
+    "mcf:start": "react-microfrontend start",
     "test:watch": "react-microfrontend test --watchAll=false",
     "test": "react-microfrontend test --watchAll=false",
     "lint": "react-microfrontend lint src/**/*.{ts,tsx}",

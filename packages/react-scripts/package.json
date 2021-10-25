@@ -86,7 +86,8 @@
     "webpack-dev-server": "^4.0.0",
     "webpack-manifest-plugin": "^4.0.2",
     "workbox-webpack-plugin": "^6.2.4",
-    "lodash": "~4.17.21"
+    "lodash": "~4.17.21",
+    "@module-federation/fmr": "~0.0.7"
   },
   "devDependencies": {
     "react": "^17.0.1",
