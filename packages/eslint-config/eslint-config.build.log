@@ -2,11 +2,15 @@ Config file "/Users/matheuskindrazki/development/hub-digital/packages/eslint-con
 
 No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/eslint-config"
 
-Config file "/Users/matheuskindrazki/development/hub-digital/packages/hub-scripts/config/rush-project.json" does not exist. Attempting to load via rig.
-
-No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/hub-scripts"
-
 Config file "/Users/matheuskindrazki/development/hub-digital/apps/react-app/config/rush-project.json" does not exist. Attempting to load via rig.
 
 No rig found for "/Users/matheuskindrazki/development/hub-digital/apps/react-app"
+
+Config file "/Users/matheuskindrazki/development/hub-digital/packages/react-scripts/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/react-scripts"
+
+Config file "/Users/matheuskindrazki/development/hub-digital/packages/react-utils/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/matheuskindrazki/development/hub-digital/packages/react-utils"
 

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "packages/eslint-config/.rush/temp/package-deps_build.json": "d9e575801a852f40db66687b5acdeaeb86d40226",
+    "packages/eslint-config/.rush/temp/package-deps_lint-staged.json": "c33aa53eadff964f460ddc376fd122a92c769942",
+    "packages/eslint-config/.rush/temp/package-deps_lint.json": "3ce7e2c6dbe30a65521d57304ac37727f79af0d5",
+    "packages/eslint-config/.rush/temp/shrinkwrap-deps.json": "af8f26672c23dabb3acb37d56a7019ee1c292c98",
+    "packages/eslint-config/base.js": "7d2f700011763b038ad68d624eb98c604ea9439a",
+    "packages/eslint-config/config.js": "afdbcac944a709802007521fd26904f1bcf5a372",
+    "packages/eslint-config/eslint-config.build.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "packages/eslint-config/index.js": "97f37769225e8b831eb192eedecfaa8bbd412efc",
+    "packages/eslint-config/package.json": "8ab3462c77926a3e026ffc825a35f7dfce7e0945",
+    "packages/eslint-config/react.js": "1a6e8670fddc64d07063f6f5c72e6587eb1a4418"
+  },
+  "arguments": ""
+}

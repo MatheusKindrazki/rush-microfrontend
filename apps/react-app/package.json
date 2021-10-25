@@ -1,10 +1,8 @@
 {
   "name": "@psdlabs/react-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@psdlabs/eslint-config": "1.0.0",
-    "@psdlabs/hub-scripts": "1.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -14,31 +12,23 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typescript": "^4.3.5",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "@psdlabs/react-scripts": "1.0.0",
+    "@psdlabs/eslint-config": "1.0.0",
+    "@types/testing-library__jest-dom": "~5.14.1"
   },
   "scripts": {
-    "start": "hub-scripts start",
-    "build": "hub-scripts build",
-    "test": "hub-scripts test",
-    "lint": "hub-scripts lint src/**/*.{ts,tsx}",
-    "lint-staged": "hub-scripts lint-staged"
+    "start": "react-microfrontend start",
+    "build": "react-microfrontend build",
+    "test:watch": "react-microfrontend test --watchAll=false",
+    "test": "react-microfrontend test --watchAll=false",
+    "lint": "react-microfrontend lint src/**/*.{ts,tsx}",
+    "lint-staged": "react-microfrontend lint-staged"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "hub-scripts lint --fix --",
-      "hub-scripts test --findRelatedTests --watchAll=false --silent"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "react-microfrontend lint --fix --",
+      "react-microfrontend test --findRelatedTests --watchAll=false --silent"
     ]
   }
 }

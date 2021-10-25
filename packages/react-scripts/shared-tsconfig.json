@@ -1,0 +1,34 @@
+{
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "/**/*",
+    "./lib/react-app.d.ts"
+  ],
+  "compilerOptions": {
+    "target": "es5",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "../../tests/*"
+      ]
+    },
+    "preserveWatchOutput": true
+  }
+}

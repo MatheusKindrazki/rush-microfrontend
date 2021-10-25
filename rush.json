@@ -7,8 +7,14 @@
   "projectFolderMinDepth": 2,
   "projectFolderMaxDepth": 3,
   "approvedPackagesPolicy": {
-    "reviewCategories": ["apps", "packages", "tools"],
-    "ignoredNpmScopes": ["@types"]
+    "reviewCategories": [
+      "apps",
+      "packages",
+      "tools"
+    ],
+    "ignoredNpmScopes": [
+      "@types"
+    ]
   },
   "gitPolicy": {},
   "repository": {},
@@ -21,19 +27,24 @@
   "variants": [],
   "projects": [
     {
-      "packageName": "@psdlabs/react-app",
-      "projectFolder": "apps/react-app",
-      "reviewCategory": "apps"
+      "packageName": "@psdlabs/react-scripts",
+      "projectFolder": "packages/react-scripts",
+      "reviewCategory": "packages"
     },
     {
-      "packageName": "@psdlabs/hub-scripts",
-      "projectFolder": "packages/hub-scripts",
+      "packageName": "@psdlabs/react-utils",
+      "projectFolder": "packages/react-utils",
       "reviewCategory": "packages"
     },
     {
       "packageName": "@psdlabs/eslint-config",
       "projectFolder": "packages/eslint-config",
       "reviewCategory": "packages"
+    },
+    {
+      "packageName": "@psdlabs/react-app",
+      "projectFolder": "apps/react-app",
+      "reviewCategory": "apps"
     }
   ]
 }
