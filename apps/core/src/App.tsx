@@ -1,7 +1,12 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import Teste from 'react-app/App';
 
-const App: React.FC = () => <div>Aplicação buildada com @psdlabs/core</div>;
+const App: React.FC = () => (
+  <React.Fragment>
+    <Teste />
+    <div>Aplicação buildada com @psdlabs/core</div>
+  </React.Fragment>
+);
 
 export default App;

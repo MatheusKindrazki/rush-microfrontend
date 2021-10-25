@@ -1,5 +1,7 @@
 module.exports = {
-  exposes: {},
+  exposes: {
+    './App': './src/App',
+  },
   shared: {
     react: {
       singleton: true,
@@ -8,9 +10,5 @@ module.exports = {
       requiredVersion: require('react').version,
       eager: true,
     },
-  },
-  remotes: {
-    'react-app':
-      'psdlabs_react_app@http://localhost:3001/static/js/mcf-remote.js',
   },
 };

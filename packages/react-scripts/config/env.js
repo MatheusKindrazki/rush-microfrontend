@@ -72,7 +72,6 @@ function getClientEnvironment(publicUrl) {
         WDS_SOCKET_PORT: process.env.WDS_SOCKET_PORT,
         FAST_REFRESH: process.env.FAST_REFRESH !== 'false',
         INCLUDE_HTML_BUILD: process.env.INCLUDE_HTML_BUILD || false,
-        SHARED_DEPENDENCIES: process.env.SHARED_DEPENDENCIES || undefined,
       }
     );
   // Stringify all values so we can feed into webpack DefinePlugin
