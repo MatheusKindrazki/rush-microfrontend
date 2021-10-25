@@ -3,6 +3,8 @@ const path = require('path');
 const webpack = require('webpack');
 const resolve = require('resolve');
 
+const { MFLiveReloadPlugin } = require('@module-federation/fmr');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InlineChunkHtmlPlugin = require('@psdlabs/react-utils/InlineChunkHtmlPlugin');
@@ -702,6 +704,7 @@ module.exports = function (webpackEnv) {
           };
         },
       }),
+      isEnvDevelopment && new MFLiveReloadPlugin({}),
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
