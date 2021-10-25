@@ -1,0 +1,27 @@
+steps:
+  - task: SonarCloudPrepare@1
+    displayName: SonarCloud Prepare
+    inputs:
+      SonarCloud: "SonarCloud"
+      organization: "editorati"
+      scannerMode: "CLI"
+      configMode: "manual"
+      cliProjectKey: "editorati_hub-digital-front"
+      cliProjectName: HubDigitalFront"
+      cliSources: "."
+      extraProperties: |
+        sonar.sources=packages/apps/web/src/components,packages/apps/web/src/pages,packages/apps/web/src/services,packages/apps/web/src/store/modules,packages/apps/web/src/utils,packages/apps/web/src/validators,packages/apps/web/src/middlewares,packages/apps/web/src/hooks,packages/common/components,packages/apps/api/src,packages/apps/newrelic/src/services
+        sonar.exclusions=**/*.spec.ts,**/*.spec.tsx,**/types.ts,**/*.d.ts,**/mock.ts,
+        sonar.coverage.exclusions=**/*.spec.ts,**/*.spec.tsx,**/types.ts,**/*.d.ts,**/mock.ts,**/*.js
+        sonar.javascript.lcov.reportPaths=coverage/lcov.info
+        sonar.testExecutionReportPaths=test-report.xml
+        sonar.test.inclusions=**/*.spec.tsx,**/*.spec.ts
+        sonar.test.exclusions=**/*.d.ts,**/*.js,**/*.jsx,**/*.ts,**/*.tsx,**/*.mjs,**/*.cjs,**/*.json,**/*.md,**/*.mdx,**/*.css,**/*.scss,**/*.less,**/*.sass,**/*.styl,**/*.html,**/*.htm,**/*.pug,**/*.ejs,**/*.jade,**/*.vue,**/*.svg,**/*.png,**/*.jpg,**/*.jpeg,**/*.gif,**/*.bmp,**/*.tiff,**/*.ico,**/*.woff,**/*.woff2,**/*.ttf,**/*.otf,**/*.eot,**/*.mp4,**/*.webm,**/*.wav,**/*.mp3,**/*.m4a,**/*.aac,**/*.oga,**/*.ogg,**/*.avi,**/*.mpg,**/*.mpeg,**/*.mkv,**/*.mov,**/*.flv,**/*.wmv,**/*.3gp,**/*.3g2,**/*.m4v,**/*.mpv,**/*.swf,**/*.webp,**/*.pdf,**/*.doc,**/*.docx,**/*.xls,**/*.xlsx,**/*.ppt,**/*.pptx,**/*.odt,**/*.ods,**/*.odp,**/*.odg,**/*.odc,**/*.odf,**/*.odb,**/*.odm,**/*.ott,**/*.oth,**/*.otp,**/*.ots,**/*.otsx,**/*.otc,**/*.otf,**/*.otg,**/*.oth,**/*.otm,**/*.otx,**/*.otp,**/*.ots,**/*.otsx,**/*.
+
+  - task: SonarCloudAnalyze@1
+    displayName: SonarCloud Analyze
+
+  - task: SonarCloudPublish@1
+    displayName: SonarCloud Publish
+    inputs:
+      pollingTimeoutSec: "300"

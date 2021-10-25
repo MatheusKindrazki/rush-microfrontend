@@ -1,0 +1,10 @@
+steps:
+  - task: Yarn@3
+    displayName: "Run tests"
+    inputs:
+      arguments: 'test:coverage'
+  - task: PublishCodeCoverageResults@1
+    displayName: "Publish Code Coverage"
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: 'coverage/cobertura-coverage.xml'

@@ -1,0 +1,11 @@
+steps:
+  - task: DownloadSecureFile@1
+    displayName: "Download env file"
+    name: envFile
+    inputs:
+      secureFile: 'env-hub-$(stageName)'
+
+  - script: |
+      cp $(envFile.secureFilePath) ./packages/apps/web/.env
+      cp $(envFile.secureFilePath) ./packages/apps/easyauth/.env
+    displayName: "Copy env file"

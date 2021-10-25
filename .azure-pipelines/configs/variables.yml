@@ -1,0 +1,11 @@
+variables:
+  BuildConfiguration: Release
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+  ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+    stageName: prod
+  ${{ if eq(variables['Build.SourceBranchName'], 'develop') }}:
+    stageName: dev
+  ${{ if startsWith(variables['Build.SourceBranch'], 'refs/heads/release') }}:
+    stageName: hml
+  ${{ if startsWith(variables['Build.SourceBranch'], 'refs/heads/hotfix') }}:
+    stageName: hml

@@ -23,7 +23,8 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-testing-library": "^3.9.2"
+    "eslint-plugin-testing-library": "^3.9.2",
+    "prettier": "^2.0.5"
   },
   "devDependencies": {
     "read-pkg-up": "7.0.1",

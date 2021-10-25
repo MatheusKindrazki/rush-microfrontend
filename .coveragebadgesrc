@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Coverage line",
+    "source": "./coverage/coverage-summary.json",
+    "attribute": "total.lines.pct",
+    "outputDir": "./docs/icons"
+  },
+  {
+    "label": "Coverage Statements",
+    "source": "./coverage/coverage-summary.json",
+    "attribute": "total.statements.pct",
+    "outputDir": "./docs/icons"
+  },
+  {
+    "label": "Coverage Functions",
+    "source": "./coverage/coverage-summary.json",
+    "attribute": "total.functions.pct",
+    "outputDir": "./docs/icons"
+  },
+  {
+    "label": "Coverage Branches",
+    "source": "./coverage/coverage-summary.json",
+    "attribute": "total.branches.pct",
+    "outputDir": "./docs/icons"
+  }
+]

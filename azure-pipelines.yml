@@ -1,0 +1,47 @@
+trigger:
+  branches:
+    include:
+    - refs/heads/develop
+    - refs/heads/release/*
+    - refs/heads/hotfix/*
+    - refs/heads/main
+name: $(date:yyyyMMdd)$(rev:.r)
+
+variables:
+- template: .azure-pipelines/configs/variables.yml
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+  - stage: TestAndBuild
+    displayName: Test, Build and Deploy
+    jobs:
+    - job: build_and_generate_artifact
+      displayName: "Build the project"
+      steps:
+      - template: .azure-pipelines/templates/copy-env.yml
+      - template: .azure-pipelines/templates/install-dependencies.yml
+      - template: .azure-pipelines/templates/run-tests.yml
+      - template: .azure-pipelines/templates/generate-release.yml
+      - template: .azure-pipelines/templates/build-project.yml
+      - template: .azure-pipelines/templates/upload-sourcemap.yml
+      - template: .azure-pipelines/templates/copy-assets.yml
+      - template: .azure-pipelines/templates/create-artifacts.yml
+      - task: WhiteSource@21
+        inputs:
+          projectName: 'hub-digital-front'
+        displayName: WhiteSource Bolt
+
+    - job: sonar_scan
+      dependsOn: build_and_generate_artifact
+      displayName: "Sonar Scanner"
+      steps:
+      - task: DownloadBuildArtifacts@1
+        displayName: "Download Project Coverage"
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'coverage'
+          downloadPath: '$(System.DefaultWorkingDirectory)'
+      - template: .azure-pipelines/templates/sonar.yml

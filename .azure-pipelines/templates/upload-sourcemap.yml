@@ -1,0 +1,4 @@
+steps:
+  - script: |
+      node --trace-warnings ./scripts/publish-nr-sourcemap.js
+    displayName: "Rising SourceMap of Code for New Relic"

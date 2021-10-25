@@ -1,0 +1,21 @@
+trigger: none
+
+variables:
+  BuildConfiguration: Release
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+  stageName: dev
+
+pool:
+  vmImage: "ubuntu-latest"
+
+stages:
+  - stage: sonar
+    displayName: Sonar Analysis
+    jobs:
+      - job:
+        displayName: Prepare SonarCloud and Run Tests
+        steps:
+        - template: ./templates/copy-env.yml
+        - template: ./templates/install-dependencies.yml
+        - template: ./templates/run-tests.yml
+        - template: ./templates/sonar.yml

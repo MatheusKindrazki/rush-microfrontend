@@ -1,0 +1,16 @@
+steps:
+  - task: NodeTool@0
+    displayName: Installing node 14+
+    inputs:
+      versionSpec: 14.x
+
+  - task: Cache@2
+    inputs:
+      path: $(YARN_CACHE_FOLDER)
+      key: '"yarn" | yarn.lock | "$(Agent.OS)" '
+      restoreKeys: |
+        yarn | "$(Agent.OS)"
+    displayName: Cache Yarn packages
+
+  - script: yarn --frozen-lockfile
+    displayName: Installing project dependencies

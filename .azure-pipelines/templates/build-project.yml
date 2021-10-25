@@ -1,0 +1,11 @@
+steps:
+  - task: Yarn@3
+    displayName: Build the project DEV/MCF
+    condition: eq(variables['Build.SourceBranchName'], 'develop')
+    inputs:
+      arguments: build:easyauth
+  - task: Yarn@3
+    displayName: Build the project
+    inputs:
+      arguments: build:web
+
